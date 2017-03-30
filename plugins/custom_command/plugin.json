@@ -1,0 +1,6 @@
+{
+	"name":"custom_command",
+	"desc":"Add custom commands",
+	"main_file":"main.js",
+	"command":"*"
+}

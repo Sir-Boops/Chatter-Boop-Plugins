@@ -26,19 +26,19 @@ var version = function(msg) {
 		// If ~command add <command> <res> <ul>
 		if(command.length >= 4 && command[1].toLowerCase() == 'add') {
 			var add = require('./functions/add.js');
-			return add.main(msg, dir, db);
+			return add.main(msg, db);
 		};
 
 		// If ~command remove <command>
 		if(command.length == 3 && command[1].toLowerCase() == 'remove') {
 			var remove = require('./functions/remove.js');
-			return remove.main(msg, dir, db);
+			return remove.main(msg, db);
 		};
 
 		// If ~command modify <command> <res> <ul>
 		if(command.length >= 4 && command[1].toLowerCase() == 'modify') {
 			var modify = require('./functions/modify.js');
-			return modify.main(msg, dir, db);
+			return modify.main(msg, db);
 		};
 
 	} else {

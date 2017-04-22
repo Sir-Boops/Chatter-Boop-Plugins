@@ -1,13 +1,13 @@
 // Node.JS Imports
 var Database = require('better-sqlite3');
 
-var version = function(msg, dir) {
+var version = function(msg) {
 
 	//Split the command up
 	var command = (JSON.parse(msg).msg.split(" "));
 
 	// Init the DB
-        var db = new Database(dir + 'commands.db', {memory: false});
+        var db = new Database('commands.db', {memory: false});
 
 	// Make sure the table is there
 	db.prepare('CREATE TABLE IF NOT EXISTS main.commands(command TEXT, res TEXT, ul INT)').run();

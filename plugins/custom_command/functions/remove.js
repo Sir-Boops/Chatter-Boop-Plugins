@@ -1,4 +1,4 @@
-var main = function(msg, dir, db) {
+var main = function(msg, db) {
 
 	// Check if the user can create a command
 	if(JSON.parse(msg).rank >= 3) {

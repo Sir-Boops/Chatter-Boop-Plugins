@@ -41,6 +41,9 @@ var version = function(msg) {
 			return modify.main(msg, db);
 		};
 
+	} else if (command[0].toLowerCase() == '~commands') {
+		var commands_comm = require('./functions/commands.js');
+		return commands_comm.main(msg, db);
 	} else {
 		// Handle checking for other commands
 		var res = db.prepare('SELECT res FROM main.commands WHERE command LIKE ' + '"' +  command[0] + '"').get();
